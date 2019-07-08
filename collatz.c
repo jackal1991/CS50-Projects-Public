@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Recursive function that counts the steps to get back to zero
+// Recursive function that counts the steps to get back to one
 int collatz(int n)
 {
     if (n == 1)
