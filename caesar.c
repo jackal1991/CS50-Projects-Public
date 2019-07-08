@@ -53,11 +53,19 @@ int main(int argc, string argv[])
                 }
             }
             else
+                // handle Upper Case    
             {
+                // handle transforms that fall above uppercase range
                 if (((plaintext[i] + key) % 52) + 52 > 90)
                 {
                     plaintext[i] = ((plaintext[i] + key) % 52) + 26; 
                 }
+                // handle transforms that fall below uppercase range
+                else if (((plaintext[i] + key) % 52) + 52 < 65)
+                {
+                    plaintext[i] = ((plaintext[i] + key) % 52) + 78;
+                }       
+                // handle transforms that fall in uppercase range
                 else
                 {
                     plaintext[i] = ((plaintext[i] + key) % 52) + 52;
