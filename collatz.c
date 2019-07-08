@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// comments comments comments
+// Recursive function that counts the steps to get back to zero
 int collatz(int n)
 {
     if (n == 1)
@@ -13,9 +13,11 @@ int collatz(int n)
         return 1 + collatz((3 * n) + 1);        
 }
 
+// executes recursive collatz function with int prompt  
 int main(void)
 {
     int n = get_int("Hello give me an int: ");
     int k = collatz(n);
     printf("Steps: %i\n", k);
+    return 0;
 }
