@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// comments comments comments
 int collatz(int n)
 {
     if (n == 1)
